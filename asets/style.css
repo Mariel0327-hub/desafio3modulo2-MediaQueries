@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0a1d37;
+  color: #fff;
+}
+
+header {
+  background-color: #081529;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.filtros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #132a4f;
+}
+
+.filtros input {
+  flex: 1;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn-filtrar {
+  padding: 0.5rem 1rem;
+  background-color: #00c853;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main-contenido {
+  display: grid;
+  grid-template-areas: 
+    "sidebar productos";
+  grid-template-columns: 200px 1fr;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #081529;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 180px;
+   grid-area: sidebar;
+}
+
+.sidebar button {
+  background-color: #132a4f;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Sección de productos con grid */
+.productos {
+  display: grid;
+   grid-area: productos;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  flex: 1;
+}
+
+.card {
+  background-color: #ffffff11;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000044;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+}
+
+
+.precio {
+  margin-top: 1rem;
+  background-color: #00c853;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #081529;
+  margin-top: auto;
+}
+
+/* Mobile: esconder sidebar y cambiar layout */
+@media (max-width: 575px) {
+  .main-contenido {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .filtros {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .menu-mobile {
+    display: block;
+    font-size: 1.5rem;
+  }
+  body {
+    background-color: white;
+    color: #081529;
+  }
+
+.card{
+  background-color: #89a2cc;
+}
+
+.precio{
+  background-color: #081529;
+}
+
+.btn-filtrar{
+  background-color: #2d5a9e;
+}
+
+.nav h1{
+    color: white;
+  }
+
+  .productos {
+    grid-template-columns: 1fr;
+  }
+}
+
